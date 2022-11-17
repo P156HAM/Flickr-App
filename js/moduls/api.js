@@ -6,6 +6,8 @@ async function search(searchValue) {
     const apiKey = '&api_key=62b2fbf8379898f4e53b0725991274fd'
     const method = 'method=flickr.photos.search'
     const misc = '&format=json&nojsoncallback=1'
+    const photoSection = document.querySelector('.photos')
+    photoSection.innerHTML = '';
 
     const url = baseUrl + method + apiKey + '&text=' + searchValue + misc
     const response = await fetch(url);
